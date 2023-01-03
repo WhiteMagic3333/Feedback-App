@@ -1,0 +1,60 @@
+// import { useState } from "react"
+
+import PropTypes from "prop-types";
+import { useContext } from "react";
+import { FaTimes, FaEdit } from "react-icons/fa";
+import Card from "./shared/Card";
+import FeedbackContext from "../context/FeedbackContext";
+
+// function FeedbackItem() {
+//   const [rating, setRating] = useState(7)
+//   const [text, setText] = useState('This is an example of feedback item')
+
+//   // const handleClick = () => {
+//   //   //sets rating to 10 directly but cant
+//   //   // use prev value
+//   //   // setRating(10)
+//   //   //prev here stores the prev value of current
+//   //   //element
+//   //   setRating((prev) => {
+//   //     return prev + 1
+//   //   })
+//   // }
+
+//   // return (
+//   //   <div className="card">
+//   //       <div className="num-display">{rating}</div>
+//   //       <div className="text-display">{text}</div>
+//   //       <button onClick={handleClick}>Click</button>
+//   //   </div>
+//   // )
+
+//   return (
+//     <div className="card">
+//         <div className="num-display">{rating}</div>
+//         <div className="text-display">{text}</div>
+//     </div>
+//   )
+// }
+
+function FeedbackItem({ item }) {
+  const { deleteFeedback, editFeedback } = useContext(FeedbackContext);
+  return (
+    <Card>
+      <div className="num-display">{item.rating}</div>
+      <button onClick={() => deleteFeedback(item.id)} className="close">
+        <FaTimes color="purple"></FaTimes>
+      </button>
+      <button className="edit" onClick={() => editFeedback(item)}>
+        <FaEdit color="green" />
+      </button>
+      <div className="text-display">{item.text}</div>
+    </Card>
+  );
+}
+
+FeedbackItem.propTypes = {
+  item: PropTypes.object.isRequired,
+};
+
+export default FeedbackItem;
