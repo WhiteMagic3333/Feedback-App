@@ -9,9 +9,10 @@ This is a simple feedback app built with React. It allows users to provide feedb
 To install the app, clone the repository and run the following commands in the root directory:
 
 #### npm install
-#### npm start
 
 This will install all of the necessary dependencies and start the development server. The app will then be available at http://localhost:3000.
+
+#### npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
