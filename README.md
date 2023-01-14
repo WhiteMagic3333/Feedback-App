@@ -10,7 +10,7 @@ To install the app, clone the repository and run the following commands in the r
 
 #### npm install
 
-This will install all of the necessary dependencies 
+This will install all of the necessary dependencies.
 
 #### npm start
 
