@@ -10,7 +10,7 @@ To install the app, clone the repository and run the following commands in the r
 
 #### npm install
 
-This will install all of the necessary dependencies and start the development server. The app will then be available at http://localhost:3000.
+This will install all of the necessary dependencies 
 
 #### npm start
 
